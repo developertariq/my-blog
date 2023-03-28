@@ -1,24 +1,134 @@
-# README
+# 📗 Table of Contents
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Blog app ](#-blog-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [📺 Presentation ](#-presentation-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-Things you may want to cover:
+# 📖 Blog app <a name="about-project"></a>
 
-* Ruby version
+**Blog app** will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. Everything will be based on the given UML class diagram. The data will be stored in postgreSQL database. 
 
-* System dependencies
+## 🛠 Built With <a name="built-with"></a>
 
-* Configuration
+### Tech Stack <a name="tech-stack"></a>
 
-* Database creation
+<ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://www.rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+</ul>
 
-* Database initialization
 
-* How to run the test suite
+### Key Features <a name="key-features"></a>
 
-* Services (job queues, cache servers, search engines, etc.)
+- **Classic example of a blog website**
+- **Display the list of posts**
+- **User can add comments**
+- **User update feeling about posts**
 
-* Deployment instructions
 
-* ...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Not deployed yet...]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📺 Presentation <a name="video-link"></a>
+
+[Not developed yet...]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
+- [Ruby](https://www.ruby-lang.org/en/) installed and running.
+- [SQLite3](https://www.sqlite.org/index.html)
+
+```
+gem rials install
+```
+### Setup
+
+Clone this repository to your desired folder:
+
+```
+git clone git@github.com:developertariq/my-blog.git
+```
+
+### Install
+
+Install this project with:
+
+```
+cd my-blog
+gem install
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Md Tariq-ul Islam**
+
+- GitHub: [@developertariq](https://github.com/developertariq)
+- Twitter: [@developer-tariq](https://twitter.com/developer-tariq)
+- LinkedIn: [@developer_tariq](https://linkedin.com/in/developer_tariq)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Not identified**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please consider giving it a star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank all code reviewers for making this project better.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE/MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

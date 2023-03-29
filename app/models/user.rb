@@ -4,4 +4,13 @@ class User < ApplicationRecord
   def posts_counter
     posts.count
   end
+
+  def update_posts_count
+    self.posts_counter = posts_counter + 1
+    save
+  end
+
+  def get_recent_posts(n=3)
+    posts.where(author: self).order(created_at: :desc).limit(n)
+  end  
 end

@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   def comments_counter
     comments.count
   end
-  
+
   def likes_counter
     likes.count
   end

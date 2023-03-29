@@ -10,7 +10,7 @@ class User < ApplicationRecord
     save
   end
 
-  def get_recent_posts(n=3)
-    posts.where(author: self).order(created_at: :desc).limit(n)
-  end  
+  def get_recent_posts(count = 3)
+    posts.where(author: self).order(created_at: :desc).limit(count)
+  end
 end

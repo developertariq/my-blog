@@ -1,13 +1,10 @@
 class User < ApplicationRecord
-  has_many :posts
+  has_many :posts, foreign_key: 'author_id'
+  has_many :comments, foreign_key: 'author_id'
+  has_many :likes, foreign_key: 'author_id'
 
   def posts_counter
     posts.count
-  end
-
-  def update_posts_count
-    self.posts_counter = posts_counter + 1
-    save
   end
 
   def get_recent_posts(count = 3)

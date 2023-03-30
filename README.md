@@ -96,7 +96,14 @@ Test this project with:
 
 ```
 cd my-blog
+```
+- MiniTest framework:
+```
 rails test
+```
+- RSpec framework:
+```
+rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

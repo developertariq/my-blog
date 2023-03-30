@@ -5,8 +5,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [📺 Presentation ](#-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -41,22 +39,7 @@
 - **User can add comments**
 - **User update feeling about posts**
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Not deployed yet.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📺 Presentation <a name="video-link"></a>
-
-- Not developed yet.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -68,10 +51,10 @@ In order to run this project you need:
 
 Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
 - [Ruby](https://www.ruby-lang.org/en/) installed and running.
-- [SQLite3](https://www.sqlite.org/index.html)
+- [PostgreSQL](https://www.postgresql.org/) installed and running.
 
 ```
-gem rials install
+gem rails install
 ```
 ### Setup
 
@@ -87,7 +70,7 @@ Install this project with:
 
 ```
 cd my-blog
-gem install
+bundle install
 ```
 
 ### Test
@@ -113,14 +96,15 @@ rspec spec
 👤 **Md Tariq-ul Islam**
 
 - GitHub: [@developertariq](https://github.com/developertariq)
-- Twitter: [@developer-tariq](https://twitter.com/developer-tariq)
-- LinkedIn: [@developer_tariq](https://linkedin.com/in/developer_tariq)
+- Twitter: [@developer-tariq](https://twitter.com/developer_tariq)
+- LinkedIn: [@developer_tariq](https://www.linkedin.com/in/developer-tariq/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Not identified**
+- [ ] **Optimized Database**
+- [ ] **Better UI Experience**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -11,6 +11,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Test](#test)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -46,13 +47,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Not deployed yet...]()
+- Not deployed yet.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="video-link"></a>
 
-[Not developed yet...]()
+- Not developed yet.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,6 +88,15 @@ Install this project with:
 ```
 cd my-blog
 gem install
+```
+
+### Test
+
+Test this project with:
+
+```
+cd my-blog
+rails test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

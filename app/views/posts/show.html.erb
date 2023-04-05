@@ -1,1 +1,7 @@
-<h1>Here are the details for post <%= @posts.id %>:</h1>
+<h1>Here are the details for post <%= @post.id %>:</h1>
+
+<h2><%= @post.title %></h2>
+
+<p><%= @post.text %></p>
+
+<p>Author: <%= link_to @user.name, user_path(@user) %></p>

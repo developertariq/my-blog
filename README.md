@@ -75,19 +75,28 @@ bundle install
 
 ### Test
 
-Test this project with:
+Test models of this project with:
 
 ```
 cd my-blog
 ```
-- MiniTest framework:
+with MiniTest framework:
 ```
 rails test
 ```
-- RSpec framework:
+with RSpec framework:
 ```
 rspec spec
 ```
+
+Test controllers of this project with:
+
+```
+cd my-blog
+```
+rspec spec/requests/users_spec.rb
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

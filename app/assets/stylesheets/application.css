@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ .item {
+  list-style-type: none;
+  margin: 0 0 16px -40px;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 #b3b1b1bf;
+}

@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- .item {
+.item {
   list-style-type: none;
   margin: 0 0 16px -40px;
   background-color: #fff;

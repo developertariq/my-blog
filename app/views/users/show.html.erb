@@ -1,1 +1,17 @@
-<h1>Here are the details of a user:</h1>
+<%= content_tag :div, class: "container" do %>
+  <%= render @user %>
+
+  <%= content_tag :div,  @user.bio,  class: "bio" do %>
+    <h4>Bio</h4>
+    <%= @user.bio %>
+  <% end %>
+  <ul>
+    <% @user.get_recent_posts.each do |post| %>
+      <li class="item">      
+        <%= render post %>
+      </li>
+    <% end %>
+  </ul>
+  <button><%= link_to "See all posts", user_posts_path(@user) %></button>
+<% end %>
+

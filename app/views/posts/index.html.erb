@@ -1,1 +1,21 @@
-<h1>Here is a list of posts of a user:</h1>
+<%= content_tag :div, class: "container" do %>
+  <%= render @user %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li class="item">
+        <%= render post %>
+        <ul class="bio">
+          <% post.recent_comments.each do |comment| %>
+            <li>
+              <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+  <%= content_tag :div, class: "will-paginate-container" do %>
+    <%= will_paginate @posts %> 
+  <% end %>
+<% end %>
+

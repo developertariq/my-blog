@@ -1,0 +1,8 @@
+<%= content_tag :div, class: "post" do %>
+  <h4>Post # <%= post.id %></h4>
+  <h5><%= link_to post.title, user_post_path(@user, post) %></h5>
+  <%= content_tag :div, class: "post-summary" do %>
+    <%= post.text.truncate_words (22) %>       
+    <%= content_tag :span, "Comments: #{post.comments_counter} Likes: #{post.likes_counter}", class: "span" %>   
+  <% end %>    
+<% end %>

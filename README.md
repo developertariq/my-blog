@@ -93,7 +93,7 @@ Test controllers of this project with:
 
 ```
 cd my-blog
-rspec spec/requests/users_spec.rb
+rspec spec/requests
 ```
 
 

@@ -6,7 +6,7 @@
     <%= @user.bio %>
   <% end %>
   <ul>
-    <% @user.get_recent_posts.each do |post| %>
+    <% @user.recent_posts.each do |post| %>
       <li class="item">      
         <%= render post %>
       </li>

@@ -65,24 +65,6 @@ body {
   text-align: center;
 }
 
-.navBar a {
-  display: block;
-  font-size: 16px;
-  padding: 8px 8px;
-  text-decoration: none;
-  color: #979197;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.navBar a:focus {
-  color: #262726f8;
-}
-
-.navBar a:hover {
-  color: #262726f8;
-}
-
 .user-button {
   background: #f1f3f4;
   border: none;
@@ -105,11 +87,10 @@ header {
   border: 1px solid #e6e3e3bf;
 }
 
-
 .item {
   list-style-type: none;
   margin: 0 0 16px -40px;
-  background-color: #fff; 
+  background-color: #fff;
   box-shadow: 0 0 2px 0 #b3b1b1bf;
 }
 
@@ -201,11 +182,29 @@ button a {
   border: 1px solid #ccc;
 }
 
+.navBar a {
+  display: block;
+  font-size: 16px;
+  padding: 8px 8px;
+  text-decoration: none;
+  color: #979197;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .will-paginate-container a:hover,
 .will-paginate-container span.current {
   background-color: #333;
   color: #fff;
   border-color: #333;
+}
+
+.navBar a:focus {
+  color: #262726f8;
+}
+
+.navBar a:hover {
+  color: #262726f8;
 }
 
 .post-comments {
@@ -220,11 +219,7 @@ button a {
   gap: 8px;
 }
 
-.post-comments form textarea {
-  height: 40px;
-}
-
-button, 
+button,
 input[type=submit] {
   display: inline-block;
   background-color: #6e6e6e;
@@ -255,7 +250,7 @@ button:hover {
   text-align: left;
 }
 
-.new-post{
+.new-post {
   height: 100%;
 }
 
@@ -264,9 +259,13 @@ button:hover {
   vertical-align: middle;
 }
 
-.post-comments form textarea,
-.new-post input[type=text],
 .new-post textarea {
+  height: 200px;
+}
+
+.new-post textarea,
+.post-comments form textarea,
+.new-post input[type=text] {
   width: calc(100% - 20px);
   padding: 10px;
   font-size: 16px;
@@ -279,6 +278,6 @@ button:hover {
   height: 30px;
 }
 
-.new-post textarea {
-  height: 200px;
+.post-comments form textarea {
+  height: 40px;
 }

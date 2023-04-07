@@ -80,3 +80,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rails-controller-testing'
 
 gem 'will_paginate'
+
+gem "bootstrap", "~> 5.0"
+
+gem "bootstrap_form", "~> 5.1"

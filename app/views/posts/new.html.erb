@@ -1,0 +1,20 @@
+<%= content_tag :div do %>  
+  <%= render 'shared/header' %>
+  <%= content_tag :div, class: "container" do %>
+    <%= content_tag :div, class: "new-post" do %>
+      <h4>Add your message here:</h4>
+      <%= form_for [@user, @post], url:  user_posts_path(current_user), locale: true, method: :post do |f| %>
+        <label>Title</label>
+        <%= f.text_field :title, required: true %>
+        <label>Message</label>
+        <%= f.text_area :text, required: true %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= content_tag :div do %>
+          <button class="cancel-button"><%= link_to "Cancel", user_posts_path(current_user) %></button>
+          <%= f.submit "Save Post" %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+

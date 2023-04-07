@@ -1,15 +1,26 @@
-<%= content_tag :div, class: "container" do %>
-  <%= content_tag :div, class: "post-head" do %>
-    <h4><%= content_tag :span, "Post # #{@post.id} by  #{@user.name}" %></h4>
-    <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
-  <% end %>
-  <h1><%= @post.title %></h1>
-  <%= @post.text %>
-  <ul class="comment">
-    <% @post.comments.each do |comment| %>
-      <li>
-        <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
-      </li>
+
+<%= content_tag :div do %>
+  <%= render 'shared/header' %>
+  <%= content_tag :div, class: "container" do %>
+    <%= content_tag :div, class: "post-head" do %>
+      <h3><%= content_tag :span, "📝 Post # #{@post.id} by  #{@user.name}" %></h3>
+      <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
     <% end %>
-  </ul>
+    <%= content_tag :div, class: "post-likes" do %>
+      <%= button_to "🤍 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
+    <% end %>
+    <h2><%= @post.title %></h2>
+    <%= raw "<p>#{@post.text}</p>" %>
+    <%= content_tag :div, class: "post-comments" do %>
+      <%= render "comments/create", locals: { post_id: @post_id, comment: Comment.new } %>
+    <% end %>
+    <ul class="comment">
+      <h3>💬 Comments:</h3>
+      <% @post.comments.each do |comment| %>
+        <li>
+          <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
+<% end %>

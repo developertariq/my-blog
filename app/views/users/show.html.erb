@@ -1,17 +1,19 @@
-<%= content_tag :div, class: "container" do %>
-  <%= render @user %>
-
-  <%= content_tag :div,  @user.bio,  class: "bio" do %>
-    <h4>Bio</h4>
-    <%= @user.bio %>
-  <% end %>
-  <ul>
-    <% @user.recent_posts.each do |post| %>
-      <li class="item">      
-        <%= render post %>
-      </li>
+<%= content_tag :div do %>
+  <%= render 'shared/header' %>
+  <%= content_tag :div, class: "container" do %>
+    <%= render 'shared/user', locale= {user: @user} %>
+    <%= content_tag :div,  @user.bio,  class: "bio" do %>
+      <h4>Bio</h4>
+      <%= @user.bio %>
     <% end %>
-  </ul>
-  <button><%= link_to "See all posts", user_posts_path(@user) %></button>
+    <ul>
+      <% @user.recent_posts.each do |post| %>
+        <li class="item">      
+          <%= render 'shared/post', locale= {user: @user, post: post} %>
+        </li>
+      <% end %>
+    </ul>
+    <button class="see-all-button"><%= link_to "See all posts", user_posts_path(@user) %></button>
+  <% end %>
 <% end %>
 

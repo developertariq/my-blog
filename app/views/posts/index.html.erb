@@ -1,21 +1,24 @@
-<%= content_tag :div, class: "container" do %>
-  <%= render @user %>
-  <ul>
-    <% @posts.each do |post| %>
-      <li class="item">
-        <%= render post %>
-        <ul class="bio">
-          <% post.recent_comments.each do |comment| %>
-            <li>
-              <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
-            </li>
-          <% end %>
-        </ul>
-      </li>
+<%= content_tag :div do %>
+  <%= render 'shared/header' %>
+  <%= content_tag :div, class: "container" do %>
+    <%= render 'shared/user', locale= {user: @user} %>
+    <ul>
+      <% @posts.each do |post| %>
+        <li class="item">
+          <%= render 'shared/post', locale= {user: @user, post: post} %>
+          <ul class="bio">
+            <% post.recent_comments.each do |comment| %>
+              <li>
+                <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+    <%= content_tag :div, class: "will-paginate-container" do %>
+      <%= will_paginate @posts %> 
     <% end %>
-  </ul>
-  <%= content_tag :div, class: "will-paginate-container" do %>
-    <%= will_paginate @posts %> 
   <% end %>
 <% end %>
 

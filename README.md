@@ -8,7 +8,7 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
+    - [Run](#run)
     - [Test](#test)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -21,6 +21,29 @@
 
 **Blog app** will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts. Everything will be based on the given UML class diagram. The data will be stored in postgreSQL database. 
 
+The project is divided in eleven (11) milestones and one exercise.
+
+- Milestone 1: Setup and controllers
+- Milestone 2: Controllers specs
+- Milestone 3: Creating a data model
+- Milestone 4: Processing data in models
+- Milestone 5: Views
+- Milestone 6: Forms
+- Milestone 7: Validations, Model specs, and n+1 problems
+- Milestone 8: Add Devise
+- Milestone 9: Add authorization rules
+- Milestone 10: Integration specs for views
+- Milestone 11: Add API endpoints
+- Exercise: API documentation
+  
+The app is built to match the following Entity Relationship Diagram:
+
+![Blog App ERD](images/blog_app_erd.png)
+
+This project is designed following these wireframes:
+
+![](images/blog_login.png)![](images/blog_root_users.png)![](images/blog_user_page.png)![](images/blog_user_all_posts.png)![](images/blog_single_post.png)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -31,71 +54,47 @@
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
 </ul>
 
-
 ### Key Features <a name="key-features"></a>
 
-- **Classic example of a blog website**
-- **Display the list of posts**
-- **User can add comments**
-- **User update feeling about posts**
+- Create a post
+- List all posts by users
+- Post details
+- User details
+- Like posts
+- Comment posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
-In order to run this project you need:
 
-Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
-- [Ruby](https://www.ruby-lang.org/en/) installed and running.
-- [PostgreSQL](https://www.postgresql.org/) installed and running.
+  * Make sure you have Ruby installed in your system. You can install it [here](https://www.ruby-lang.org/en/documentation/installation/)
 
-```
-gem rails install
-```
+  * Get started with [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html).
+
+  * Make sure you have [PostgreSQL](https://www.postgresql.org/) installed and running.
+
 ### Setup
 
-Clone this repository to your desired folder:
+  * Clone this repository by running `git clone https://github.com/developertariq/my-blog` in your command line.
 
-```
-git clone git@github.com:developertariq/my-blog.git
-```
+  * Navigate to the repository by running `cd my-blog`.
 
-### Install
-
-Install this project with:
-
-```
-cd my-blog
-bundle install
-```
+  * Run `bundle install` to install all the gems.
+### Run
+  *  Change/include `host, username, password` according to your database server.
+  *  Run `rails db:create` and `rails db:migrate`
+  *  Run `rails db:seed` to populate the database with some sample data.
+  *  Run `rails s` to start the server.
+  *  In your browser, go to `http://localhost:3000`.
 
 ### Test
 
-Test models of this project with:
-
-```
-cd my-blog
-```
-with MiniTest framework:
-```
-rails test
-```
-with RSpec framework:
-```
-rspec spec
-```
-
-Test controllers of this project with:
-
-```
-cd my-blog
-rspec spec/requests
-```
-
+  * Run `gem install rspec` to install Rspec,
+  * Run `rspec spec` to run all the test cases, and
+  * Run `rspec spec/name_of_test_file.rb` to run test cases individually.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,9 +1,13 @@
-<%= content_tag :div, class: "container" do %>
-  <ul>
-    <% @users.each do |user| %>
-      <li class="item">
-        <%= render user %>
-      </li>
-    <% end %>
-  </ul>
+
+<%= content_tag :div do %>
+  <%= render 'shared/header' %>
+  <%= content_tag :div, class: "container" do %>
+    <ul class="user-list">
+      <% @users.each do |user| %>
+        <li class="item">
+          <%= render 'shared/user', locale= {user: user} %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>

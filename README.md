@@ -42,8 +42,16 @@ The app is built to match the following Entity Relationship Diagram:
 
 This project is designed following these wireframes:
 
+<p align="center">
+  <img src="./images/blog_login.png" alt="Login page wireframe" width="250px" />
+  <img src="./images/blog_root_users.png" alt="All users page wireframe"  width="250px"  />
+  <img src="./images/blog_user_page.png" alt="Single user page wireframe"  width="250px"  />
+</p>
 
-![](images/blog_login.png){ width=100px }![](images/blog_root_users.png){ width=100px }![](images/blog_user_page.png){ width=100px }![](images/blog_user_all_posts.png){ width=100px }![](images/blog_single_post.png){ width=100px }
+<p align="center">
+  <img src="./images/blog_user_all_posts.png" alt="All posts by a given user page wireframe"  width="250px"  />
+  <img src="./images/blog_single_post.png" alt="Single post page wireframe"  width="250px"  />
+</p>
 
 ## 🛠 Built With <a name="built-with"></a>
 

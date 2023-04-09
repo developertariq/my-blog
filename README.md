@@ -38,7 +38,9 @@ The project is divided in eleven (11) milestones and one exercise.
   
 The app is built to match the following Entity Relationship Diagram:
 
-![Blog App ERD](images/blog_app_erd.png)
+<p align="center">
+  <img src="./images/blog_app_erd.png" alt="Data model"  width="500px"  />
+</p>
 
 This project is designed following these wireframes:
 

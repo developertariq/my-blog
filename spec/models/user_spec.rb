@@ -45,8 +45,7 @@ RSpec.describe User, type: :model do
       post1
       post2
       post3
-      expect(user.get_recent_posts(1)).to eq([post3])
-      expect(user.get_recent_posts(2)).to eq([post3, post2])
+      expect(user.recent_posts).to eq([post3, post2, post1])
     end
   end
 end

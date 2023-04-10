@@ -105,8 +105,11 @@ This project is designed following these wireframes:
 
   * Run `gem install rspec` to install Rspec,
   * Run `rspec spec` to run all the test cases, and
-  * Run `rspec spec/name_of_test_file.rb` to run test cases individually.
-
+  * Run `rspec spec/models` to run test cases for `models`.
+  * Run `rspec spec/requests` to run test cases for `controllers`.
+  * Run `rspec spec/features` to run test cases for `views`.
+  * Run `rspec spec/filepath/filename.rb` to run test cases individually.
+     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -116,6 +119,13 @@ This project is designed following these wireframes:
 - GitHub: [@developertariq](https://github.com/developertariq)
 - Twitter: [@developer-tariq](https://twitter.com/developer_tariq)
 - LinkedIn: [@developer_tariq](https://www.linkedin.com/in/developer-tariq/)
+
+👤 **Newton Alumasa**
+
+- [Github](https://github.com/altontonn/)
+- [Twitter](https://twitter.com/AlumasaNewton)
+- [Linkedin](https://www.linkedin.com/in/newton-alumasa/)
+  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

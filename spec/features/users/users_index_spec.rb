@@ -1,18 +1,19 @@
 require 'rails_helper'
-Rspec.describe 'User Index Page', type: :feature do
+
+RSpec.describe 'User Index Page', type: :feature do
   before :each do
     @user = User.create(
-      name: 'Tariq Islam'
-      photo: 'https://images.pexels.com/photos/4050426/pexels-photo-4050426.jpeg'
-      bio: 'chill with laptop'
-      posts_counter: 2
+      name: 'Ellon',
+      photo: 'https://picsum.photos/300/200',
+      bio: 'Software Engineer from Nigeria',
+      posts_counter: 4
     )
     visit users_path
   end
 
   it 'shows username' do
     visit users_path
-    expect(page).to have_content('Tariq Islam')
+    expect(page).to have_content('Ellon')
   end
 
   it 'should show the profile picture for each user' do
@@ -22,12 +23,12 @@ Rspec.describe 'User Index Page', type: :feature do
 
   it 'should show the number of posts each user has written' do
     visit users_path
-    expect(page).to have_content('Number of posts: 2')
+    expect(page).to have_content("Number of posts: #{@user.posts_counter}")
   end
 
   it 'should redirect to user show page when clicked' do
     visit users_path
-    click_link('Tariq Islam')
-    expect(page).to have_content('Tariq Islam')
+    click_link('Ellon')
+    expect(page).to have_content('Ellon')
   end
 end

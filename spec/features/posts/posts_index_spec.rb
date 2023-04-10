@@ -10,15 +10,15 @@ RSpec.describe 'Posts index ', type: :feature do
     )
     visit user_posts_path(@user)
     @first_post = Post.create(
-      title: 'First post', 
+      title: 'First post',
       text: 'This is my first post',
-      comments_counter: 0, 
+      comments_counter: 0,
       likes_counter: 0,
       author: @user.id
     )
     @first_comment = Comment.create(
-      post: @first_post.id, 
-      author: @user.id, 
+      post: @first_post.id,
+      author: @user.id,
       text: 'Sure. Great reminder, thanks!'
     )
   end
@@ -60,7 +60,7 @@ RSpec.describe 'Posts index ', type: :feature do
     visit user_posts_path(@user)
     expect(page).to have_css('.will-paginate-container')
   end
-  
+
   it 'redirects post to the show page ' do
     visit user_posts_path(@user)
     click_link('See Post')

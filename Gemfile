@@ -84,3 +84,5 @@ gem 'will_paginate'
 gem 'bootstrap', '~> 5.0'
 
 gem 'bootstrap_form', '~> 5.1'
+
+gem 'devise'

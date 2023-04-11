@@ -56,6 +56,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'devise'
 end
 
 group :development do
@@ -84,5 +85,3 @@ gem 'will_paginate'
 gem 'bootstrap', '~> 5.0'
 
 gem 'bootstrap_form', '~> 5.1'
-
-gem 'devise'

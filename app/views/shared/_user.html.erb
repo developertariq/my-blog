@@ -1,5 +1,7 @@
 <%= content_tag :div, class: "user" do %>
-  <%= image_tag user.photo, alt: "user photo", class: "img-fluid" %>
+  <% if user.photo %>
+    <%= image_tag user.photo, alt: "user photo", class: "img-fluid" %>
+  <% end %>
   <%= content_tag :div, class: "user-summary" do %>
     <h1><%= link_to user.name, user_path(user) %></h1>
     <%= content_tag :span, "Number of posts: #{user.posts_counter}", class: "span" %>

@@ -281,3 +281,20 @@ button:hover {
 .post-comments form textarea {
   height: 40px;
 }
+
+.devise {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 120px 100px;
+  margin: 0 auto;
+}
+
+.devise input[type=email],
+.devise input[type=password],
+.devise input[type=text] {
+  width: 100%;
+  height: 25px;
+  padding: 4px;
+  margin-bottom: 8px;
+}

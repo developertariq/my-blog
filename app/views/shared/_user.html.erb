@@ -1,6 +1,8 @@
 <%= content_tag :div, class: "user" do %>
   <% if user.photo %>
     <%= image_tag user.photo, alt: "user photo", class: "img-fluid" %>
+  <% else %>
+    <div class="img-fluid"></div>
   <% end %>
   <%= content_tag :div, class: "user-summary" do %>
     <h1><%= link_to user.name, user_path(user) %></h1>

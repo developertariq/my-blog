@@ -54,10 +54,10 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails'
-  gem 'rspec-rails'
   gem 'devise'
+  gem 'factory_bot_rails'
   gem 'letter_opener'
+  gem 'rspec-rails'
 end
 
 group :development do

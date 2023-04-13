@@ -58,6 +58,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'letter_opener'
   gem 'rspec-rails'
+  gem 'cancancan'
 end
 
 group :development do

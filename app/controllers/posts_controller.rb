@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   def index
     @user = User.find_by(id: params[:user_id])
     @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 2)
+
+    render json:  @posts.includes(:author), only: [:id, :title, :text] 
   end
 
   def show

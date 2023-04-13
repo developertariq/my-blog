@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
   # def destroy
   #   @post = Post.find(params[:id])
-    
+
   #   authorize! :destroy, @post
 
   #   if @post.destroy

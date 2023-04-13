@@ -11,6 +11,9 @@
     <% end %>
     <h2><%= @post.title %></h2>
     <%= raw "<p>#{@post.text}</p>" %>
+    <% if can? :destroy, @post %>
+      <%= button_to "Delete", user_post_path(current_user, @post), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
     <%= content_tag :div, class: "post-comments" do %>
       <%= render "comments/create", locals: { post_id: @post_id, comment: Comment.new } %>
     <% end %>
@@ -19,6 +22,9 @@
       <% @post.comments.each do |comment| %>
         <li>
           <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
+          <% if can? :destroy, comment %>
+             <%= button_to "Delete", user_post_comment_path(comment.author, comment.post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
         </li>
       <% end %>
     </ul>

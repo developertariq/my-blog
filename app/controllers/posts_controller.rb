@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     authorize! :destroy, @post
-
+    @post.comments.destroy_all
     if @post.destroy
       flash[:success] = 'Post deleted successfully.'
       redirect_to user_posts_path(current_user)

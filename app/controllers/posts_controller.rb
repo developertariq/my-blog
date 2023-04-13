@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
     if @post.destroy
       flash[:success] = 'Post deleted successfully.'
-      redirect_to user_posts_path(current_user)
+      redirect_to user_posts_path(@post.author)
     else
       flash[:error] = 'Failed to delete post.'
       redirect_to @post

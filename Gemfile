@@ -59,6 +59,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'letter_opener'
   gem 'rspec-rails'
+  gem 'bootstrap', '~> 5.0'
+  gem 'bootstrap_form', '~> 5.1'
 end
 
 group :development do
@@ -83,7 +85,3 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rails-controller-testing'
 
 gem 'will_paginate'
-
-gem 'bootstrap', '~> 5.0'
-
-gem 'bootstrap_form', '~> 5.1'

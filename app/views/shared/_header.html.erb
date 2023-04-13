@@ -4,6 +4,12 @@
       <ul class="menu">
         <li><%= link_to "Home", users_path %></li>
         <li><%= link_to "Create New Post", new_user_post_path(current_user) %></li>
+        <ul >
+          <% if current_user %>
+            <li> <%= link_to "Edit Account", edit_user_registration_path, class: "nav-link" %></li>
+            <li > <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-small btn-primary mx-2" %></li>
+          <% end %>
+        </ul>
       </ul>
     </nav>
   </header>

@@ -11,11 +11,17 @@ class CommentsController < ApplicationController
     redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.'
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.' }
-        format.json { render json: {status: 'success', message: 'Comment created successfully', data: @comment}, status: :created }
+        format.html do
+          redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.'
+        end
+        format.json do
+          render json: { status: 'success', message: 'Comment created successfully', data: @comment }, status: :created
+        end
       else
         format.html { render :new }
-        format.json { render json: { status: 'error', message: 'Failed to create comment' }, status: :unprocessable_entity }
+        format.json do
+          render json: { status: 'error', message: 'Failed to create comment' }, status: :unprocessable_entity
+        end
       end
     end
   end
@@ -26,10 +32,10 @@ class CommentsController < ApplicationController
 
     if @comment.destroy
       flash[:success] = 'Comment deleted successfully.'
-      redirect_to user_post_path(@comment.post.author, @comment.post) 
+      redirect_to user_post_path(@comment.post.author, @comment.post)
     else
       flash[:error] = 'Failed to delete comment.'
-      redirect_to @comment.post 
+      redirect_to @comment.post
     end
   end
 end

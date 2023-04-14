@@ -8,7 +8,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @user.as_json(include: {posts: {include: {comments: {only: [:id, :text]}}, only: [:id, :title, :text]}}, only: [:id, :name, :photo, :bio]) }
+      format.json do
+        render json: @user.as_json(
+          include: { posts: { include: { comments: { only: %i[id text] } },
+                              only: %i[id title text] } }, only: %i[id name photo bio]
+        )
+      end
     end
   end
 end

@@ -76,11 +76,11 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'cancancan'
-gem 'rails-controller-testing'
-gem 'letter_opener'
-gem 'will_paginate'
+gem 'active_model_serializers', '~> 0.10.2'
 gem 'bootstrap', '~> 5.0'
 gem 'bootstrap_form', '~> 5.1'
-gem 'active_model_serializers', '~> 0.10.2'
+gem 'cancancan'
+gem 'letter_opener'
+gem 'rails-controller-testing'
+gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'will_paginate'

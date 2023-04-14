@@ -2,6 +2,10 @@ class PostsController < ApplicationController
   def index
     @user = User.find_by(id: params[:user_id])
     @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 2)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+    end
   end
 
   def show
@@ -15,12 +19,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(author_id: params[:post][:user_id], title: params[:post][:title],
-                        text: params[:post][:text].gsub(/\r\n?/, '<br>'))
-    if @post.save
-      redirect_to user_path(params[:post][:user_id]), notice: 'Post was successfully created.'
-    else
-      render :new
+    @post = Post.create(author_id: params[:post][:user_id], title: params[:post][:title], text: params[:post][:text])
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to user_path(params[:post][:user_id]), notice: 'Post was successfully created.' }
+      else
+        format.html { render :new }
+      end
     end
   end
 
@@ -31,7 +36,7 @@ class PostsController < ApplicationController
 
     if @post.destroy
       flash[:success] = 'Post deleted successfully.'
-      redirect_to user_posts_path(current_user)
+      redirect_to user_posts_path(@post.author)
     else
       flash[:error] = 'Failed to delete post.'
       redirect_to @post

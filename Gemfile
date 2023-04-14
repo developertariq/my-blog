@@ -51,16 +51,12 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'byebug', platform: :mri
-  gem 'cancancan'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'devise'
   gem 'factory_bot_rails'
-  gem 'letter_opener'
   gem 'rspec-rails'
-  gem 'bootstrap', '~> 5.0'
-  gem 'bootstrap_form', '~> 5.1'
 end
 
 group :development do
@@ -81,7 +77,10 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
-
+gem 'cancancan'
 gem 'rails-controller-testing'
-
+gem 'letter_opener'
 gem 'will_paginate'
+gem 'bootstrap', '~> 5.0'
+gem 'bootstrap_form', '~> 5.1'
+gem 'active_model_serializers', '~> 0.10.2'

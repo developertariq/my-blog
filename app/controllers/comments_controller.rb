@@ -3,7 +3,9 @@ class CommentsController < ApplicationController
     user = User.find(params[:user_id])
     post = user.posts.find(params[:post_id])
     comments = post.comments
-    render json: comments
+    respond_to do |format|
+      format.json {render json: comments}
+    end
   end
 
   def create

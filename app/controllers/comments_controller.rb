@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     post = user.posts.find(params[:post_id])
     comments = post.comments
     respond_to do |format|
-      format.json {render json: comments}
+      format.json { render json: comments }
     end
   end
 

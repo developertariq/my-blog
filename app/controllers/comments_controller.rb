@@ -9,15 +9,15 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(author_id: params[:user_id], post_id: params[:post_id], text: params[:comment][:text])
     redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.'
-    # respond_to do |format|
-    #   if @comment.save
-    #     format.html { redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.' }
-    #     format.json { render json: {status: 'success', message: 'Comment created successfully', data: @comment}, status: :created }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: { status: 'error', message: 'Failed to create comment' }, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to user_post_path(params[:user_id], params[:post_id]), notice: 'Comment was successfully created.' }
+        format.json { render json: {status: 'success', message: 'Comment created successfully', data: @comment}, status: :created }
+      else
+        format.html { render :new }
+        format.json { render json: { status: 'error', message: 'Failed to create comment' }, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

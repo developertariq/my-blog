@@ -52,13 +52,11 @@ gem 'rswag-ui'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'byebug', platform: :mri
-  gem 'cancancan'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'devise'
   gem 'factory_bot_rails'
-  gem 'letter_opener'
   gem 'rspec-rails'
   gem 'rswag-specs'
 end
@@ -80,12 +78,11 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'rails-controller-testing'
-
-gem 'will_paginate'
-
+gem 'active_model_serializers', '~> 0.10.2'
 gem 'bootstrap', '~> 5.0'
-
 gem 'bootstrap_form', '~> 5.1'
+gem 'cancancan'
+gem 'letter_opener'
+gem 'rails-controller-testing'
+gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'will_paginate'

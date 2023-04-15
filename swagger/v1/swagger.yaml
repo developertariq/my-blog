@@ -1,0 +1,127 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/users/:user_id/posts.json":
+    get:
+      summary: Retrieves a list of all posts for a user
+      tags:
+      - Posts
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    text:
+                      type: string
+                    author:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
+                        photo:
+                          type: string
+                          nullable: true
+                        bio:
+                          type: string
+                          nullable: true
+                      required:
+                      - id
+                      - name
+                    comments:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                          text:
+                            type: string
+                          author_id:
+                            type: integer
+                          post_id:
+                            type: integer
+                        required:
+                        - id
+                        - text
+                        - author_id
+                        - post_id
+                  required:
+                  - id
+                  - title
+                  - text
+                  - author
+                  - comments
+  "/users/:user_id/posts/:post_id/comments.json":
+    get:
+      summary: Retrieves comments for a post
+      tags:
+      - Comments
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    author_id:
+                      type: integer
+                    post_id:
+                      type: integer
+                    text:
+                      type: string
+                  required:
+                  - id
+                  - author_id
+                  - post_id
+                  - text
+  "/users/:user_id/posts/:post_id/comments":
+    post:
+      summary: Creates a new comment
+      tags:
+      - Comments
+      parameters: []
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                author_id:
+                  type: integer
+                post_id:
+                  type: integer
+                text:
+                  type: string
+              required:
+              - author_id
+              - post_id
+              - text
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com

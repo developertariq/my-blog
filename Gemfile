@@ -59,10 +59,10 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'devise'
   gem 'factory_bot_rails'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'rspec-rails'
   gem 'rswag-specs'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -78,7 +78,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-
 end
 
 gem 'active_model_serializers', '~> 0.10.2'

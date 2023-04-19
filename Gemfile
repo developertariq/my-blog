@@ -45,9 +45,12 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-
+# gem 'rswag-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'byebug', platform: :mri
@@ -57,6 +60,9 @@ group :development, :test do
   gem 'devise'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rswag-specs'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -72,8 +78,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
 
 gem 'active_model_serializers', '~> 0.10.2'
